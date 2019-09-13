@@ -39,12 +39,19 @@ echo "<html>
 ?>
 
 <script type="text/javascript">
+// pritiskom na kolonu koja ima ime klase ID uzima se vrijednosti iz data atributa
+// te spremamo atribute u promjenjive. Nakon toga, u klasi 'result' smjestamo rezultat
 $( document ).ready(function() {
   $('.id').click(function(){
       var factor1 = $(this).data('factor1');
       var factor2 = $(this).data('factor2');
       var operation = $(this).data('operation');
       $('.result').text("Result is: "+factor1*factor2);
+
+// pozivanje AJAX metodom POST koja ide na klasu Calculator te prosljedjuje parametre
+// prvi faktor, drugi faktor te tip operacije koji se koriste
+// kao rezultat "SUCCESS" iskoristen je TOAST poruka iz Materialize CSS kao notifikacija
+// da se radi o uspjeno obavljenom poslu
   $.ajax({
      type: "POST",
      url: "class/calculator.class.php",
