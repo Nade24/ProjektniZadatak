@@ -1,2 +1,2 @@
-# ProjektniZadatak
+# Projektni zadatak
  INFOMEDIA PROJEKTNI ZADATAK
